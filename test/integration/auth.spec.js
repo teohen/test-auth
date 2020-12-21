@@ -2,7 +2,7 @@ const { expect, assert } = require('chai')
 const request = require('supertest')
 const faker = require('faker')
 const app = require('../../src/app')
-const encrypt = require('../../src/utils/encript')
+const { encrypt } = require('../../src/utils/util')
 
 before(() => {
     userFake = {
