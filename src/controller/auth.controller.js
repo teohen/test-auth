@@ -1,12 +1,21 @@
-const crypto = require('crypto')
-const AuthService = require('../services/AuthService')
-const encrypt = require('../utils/encript')
+
+const AuthService = require('../service/AuthService')
+const UserService = require('../service/UserService')
+const { encrypt } = require('../utils/util')
+
 
 const AuthController = {
     createUser(email, password) {
         const password_hash = encrypt(password)
-        const token = 'sdjoiadjoiasj'
-        return AuthService.createUser(email, password_hash, token)
+        const user = UserService.createUser(email, password_hash)
+        const token = AuthService.createToken(user.id)
+        return {
+            ...user,
+            token
+        }
+    },
+    login(email, password) {
+
     }
 }
 
