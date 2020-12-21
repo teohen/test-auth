@@ -1,0 +1,25 @@
+{
+  "name": "test-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/teohen/test-auth.git",
+  "author": "teohen <teodorohenriquecarvalho@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "supertest": "^6.0.1"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "nyc mocha"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
